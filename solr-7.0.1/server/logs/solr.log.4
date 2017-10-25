@@ -1,0 +1,1445 @@
+2017-10-18 18:26:08.565 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-10-18 18:26:08.986 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.1
+2017-10-18 18:26:08.986 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-10-18 18:26:08.986 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/user/Project/solr-7.0.1, Default config dir: /home/user/Project/solr-7.0.1/server/solr/configsets/_default/conf
+2017-10-18 18:26:09.006 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-10-18T18:26:08.987Z
+2017-10-18 18:26:09.007 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-10-18 18:26:09.101 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/user/Project/solr-7.0.1/server/solr
+2017-10-18 18:26:09.150 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/user/Project/solr-7.0.1/server/solr/solr.xml
+2017-10-18 18:26:10.497 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /home/user/Project/solr-7.0.1/server/solr
+2017-10-18 18:26:10.610 INFO  (main) [   ] o.e.j.s.Server Started @3053ms
+2017-10-18 18:26:14.887 INFO  (qtp717356484-18) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2017-10-18 18:26:16.051 INFO  (qtp717356484-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=168
+2017-10-18 18:26:16.106 INFO  (qtp717356484-32) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=217
+2017-10-18 18:26:16.106 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=218
+2017-10-18 18:26:29.833 INFO  (qtp717356484-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:26:29.838 INFO  (qtp717356484-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=4
+2017-10-18 18:26:29.843 INFO  (qtp717356484-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:28:18.599 INFO  (qtp717356484-18) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=~/Project/solr&wt=json&_=1508351175644
+2017-10-18 18:28:18.670 ERROR (qtp717356484-18) [   x:application] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Unable to create core [application] Caused by: Can't find resource 'solrconfig.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/~/Project/solr'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [application]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core application: Error loading solr config from /home/user/Project/solr-7.0.1/server/solr/~/Project/solr/conf/solrconfig.xml
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Error loading solr config from /home/user/Project/solr-7.0.1/server/solr/~/Project/solr/conf/solrconfig.xml
+	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:188)
+	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:109)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:91)
+	... 39 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/~/Project/solr'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:362)
+	at org.apache.solr.core.Config.<init>(Config.java:120)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:203)
+	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:180)
+	... 41 more
+
+2017-10-18 18:28:18.670 INFO  (qtp717356484-18) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=~/Project/solr&wt=json&_=1508351175644} status=400 QTime=71
+2017-10-18 18:28:38.001 INFO  (qtp717356484-32) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=application&wt=json&_=1508351175644
+2017-10-18 18:28:38.005 ERROR (qtp717356484-32) [   x:application] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Unable to create core [application] Caused by: Can't find resource 'solrconfig.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/application'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [application]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core application: Error loading solr config from /home/user/Project/solr-7.0.1/server/solr/application/conf/solrconfig.xml
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Error loading solr config from /home/user/Project/solr-7.0.1/server/solr/application/conf/solrconfig.xml
+	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:188)
+	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:109)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:91)
+	... 39 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/application'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:362)
+	at org.apache.solr.core.Config.<init>(Config.java:120)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:203)
+	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:180)
+	... 41 more
+
+2017-10-18 18:28:38.005 INFO  (qtp717356484-32) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=application&wt=json&_=1508351175644} status=400 QTime=4
+2017-10-18 18:29:31.327 INFO  (qtp717356484-16) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/solr/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:29:31.328 ERROR (qtp717356484-16) [   ] o.a.s.c.CorePropertiesLocator Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties: /solr
+2017-10-18 18:29:31.329 ERROR (qtp717356484-16) [   ] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties : /solr
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties : /solr
+	at org.apache.solr.core.CorePropertiesLocator.writePropertiesFile(CorePropertiesLocator.java:97)
+	at org.apache.solr.core.CorePropertiesLocator.create(CorePropertiesLocator.java:70)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:915)
+	... 37 more
+
+2017-10-18 18:29:31.330 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/solr/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=3
+2017-10-18 18:30:46.797 INFO  (qtp717356484-19) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/solr/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:30:46.798 ERROR (qtp717356484-19) [   ] o.a.s.c.CorePropertiesLocator Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties: /solr
+2017-10-18 18:30:46.799 ERROR (qtp717356484-19) [   ] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties : /solr
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties : /solr
+	at org.apache.solr.core.CorePropertiesLocator.writePropertiesFile(CorePropertiesLocator.java:97)
+	at org.apache.solr.core.CorePropertiesLocator.create(CorePropertiesLocator.java:70)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:915)
+	... 37 more
+
+2017-10-18 18:30:46.799 INFO  (qtp717356484-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/solr/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=2
+2017-10-18 18:31:15.019 INFO  (qtp717356484-16) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/solr/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:31:15.020 ERROR (qtp717356484-16) [   ] o.a.s.c.CorePropertiesLocator Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties: /solr
+2017-10-18 18:31:15.021 ERROR (qtp717356484-16) [   ] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties : /solr
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Couldn't persist core properties to /solr/solr-7.0.1/server/solr/configsets/basic_configs/core.properties : /solr
+	at org.apache.solr.core.CorePropertiesLocator.writePropertiesFile(CorePropertiesLocator.java:97)
+	at org.apache.solr.core.CorePropertiesLocator.create(CorePropertiesLocator.java:70)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:915)
+	... 37 more
+
+2017-10-18 18:31:15.021 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/solr/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=2
+2017-10-18 18:31:36.964 INFO  (qtp717356484-22) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:31:36.968 ERROR (qtp717356484-22) [   x:application] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Unable to create core [application] Caused by: Can't find resource 'solrconfig.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [application]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core application: Error loading solr config from /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/conf/solrconfig.xml
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Error loading solr config from /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/conf/solrconfig.xml
+	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:188)
+	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:109)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:91)
+	... 39 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:362)
+	at org.apache.solr.core.Config.<init>(Config.java:120)
+	at org.apache.solr.core.Config.<init>(Config.java:90)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:203)
+	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:180)
+	... 41 more
+
+2017-10-18 18:31:36.968 INFO  (qtp717356484-22) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=4
+2017-10-18 18:32:23.213 INFO  (qtp717356484-14) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:32:23.398 INFO  (qtp717356484-14) [   x:application] o.a.s.c.SolrResourceLoader [application] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:32:24.086 INFO  (qtp717356484-14) [   x:application] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:32:24.158 INFO  (qtp717356484-14) [   x:application] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:32:24.158 ERROR (qtp717356484-14) [   x:application] o.a.s.s.ManagedIndexSchemaFactory Error loading both non-managed schema 'schema.xml' and managed schema 'managed-schema'
+org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'schema.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openSchema(SolrResourceLoader.java:354)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.readSchemaLocally(ManagedIndexSchemaFactory.java:206)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:118)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+2017-10-18 18:32:24.175 ERROR (qtp717356484-14) [   x:application] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Unable to create core [application] Caused by: Can't find resource 'schema.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [application]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core application: Error loading both non-managed schema 'schema.xml' and managed schema 'managed-schema'
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Error loading both non-managed schema 'schema.xml' and managed schema 'managed-schema'
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.readSchemaLocally(ManagedIndexSchemaFactory.java:213)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:118)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'schema.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openSchema(SolrResourceLoader.java:354)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.readSchemaLocally(ManagedIndexSchemaFactory.java:206)
+	... 44 more
+
+2017-10-18 18:32:24.175 INFO  (qtp717356484-14) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=961
+2017-10-18 18:33:12.199 INFO  (qtp717356484-31) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:33:12.230 INFO  (qtp717356484-31) [   x:application] o.a.s.c.SolrResourceLoader [application] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:33:12.248 INFO  (qtp717356484-31) [   x:application] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:33:12.274 INFO  (qtp717356484-31) [   x:application] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:33:12.274 ERROR (qtp717356484-31) [   x:application] o.a.s.s.ManagedIndexSchemaFactory Error loading both non-managed schema 'schema.xml' and managed schema 'managed-schema'
+org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'schema.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openSchema(SolrResourceLoader.java:354)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.readSchemaLocally(ManagedIndexSchemaFactory.java:206)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:118)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+2017-10-18 18:33:12.275 ERROR (qtp717356484-31) [   x:application] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Unable to create core [application] Caused by: Can't find resource 'schema.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [application]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core application: Error loading both non-managed schema 'schema.xml' and managed schema 'managed-schema'
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Error loading both non-managed schema 'schema.xml' and managed schema 'managed-schema'
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.readSchemaLocally(ManagedIndexSchemaFactory.java:213)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:118)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'schema.xml' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.solr.core.SolrResourceLoader.openSchema(SolrResourceLoader.java:354)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.readSchemaLocally(ManagedIndexSchemaFactory.java:206)
+	... 44 more
+
+2017-10-18 18:33:12.275 INFO  (qtp717356484-31) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=76
+2017-10-18 18:33:25.493 INFO  (qtp717356484-16) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:33:25.514 INFO  (qtp717356484-16) [   x:application] o.a.s.c.SolrResourceLoader [application] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:33:25.531 INFO  (qtp717356484-16) [   x:application] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:33:25.549 INFO  (qtp717356484-16) [   x:application] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:33:25.608 INFO  (qtp717356484-16) [   x:application] o.a.s.s.IndexSchema [application] Schema name=default-config
+2017-10-18 18:33:26.191 ERROR (qtp717356484-16) [   x:application] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'application': Unable to create core [application] Caused by: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [application]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core application: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.schema.ManagedIndexSchema.informResourceLoaderAwareObjectsInChain(ManagedIndexSchema.java:1321)
+	at org.apache.solr.schema.ManagedIndexSchema.informResourceLoaderAwareObjectsForFieldType(ManagedIndexSchema.java:1172)
+	at org.apache.solr.schema.ManagedIndexSchema.postReadInform(ManagedIndexSchema.java:1157)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:574)
+	... 46 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.lucene.analysis.util.AbstractAnalysisFactory.getLines(AbstractAnalysisFactory.java:254)
+	at org.apache.lucene.analysis.util.AbstractAnalysisFactory.getWordSet(AbstractAnalysisFactory.java:243)
+	at org.apache.lucene.analysis.util.ElisionFilterFactory.inform(ElisionFilterFactory.java:59)
+	at org.apache.solr.schema.ManagedIndexSchema.informResourceLoaderAwareObjectsInChain(ManagedIndexSchema.java:1319)
+	... 49 more
+
+2017-10-18 18:33:26.191 INFO  (qtp717356484-16) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=698
+2017-10-18 18:33:51.356 INFO  (qtp717356484-22) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:33:51.375 INFO  (qtp717356484-22) [   x:application] o.a.s.c.SolrResourceLoader [application] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:33:51.390 INFO  (qtp717356484-22) [   x:application] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:33:51.410 INFO  (qtp717356484-22) [   x:application] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:33:51.422 INFO  (qtp717356484-22) [   x:application] o.a.s.s.IndexSchema [application] Schema name=default-config
+2017-10-18 18:33:51.651 INFO  (qtp717356484-22) [   x:application] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2017-10-18 18:33:51.694 INFO  (qtp717356484-22) [   x:application] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/conf/managed-schema
+2017-10-18 18:33:51.764 INFO  (qtp717356484-22) [   x:application] o.a.s.s.ManagedIndexSchemaFactory After upgrading to managed schema, renamed the non-managed schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml to /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml.bak
+2017-10-18 18:33:51.764 INFO  (qtp717356484-22) [   x:application] o.a.s.c.CoreContainer Creating SolrCore 'application' using configuration from instancedir /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs, trusted=true
+2017-10-18 18:33:51.779 INFO  (qtp717356484-22) [   x:application] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-10-18 18:33:51.784 INFO  (qtp717356484-22) [   x:application] o.a.s.c.SolrCore [[application] ] Opening new SolrCore at [/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs], dataDir=[/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/data/]
+2017-10-18 18:33:51.921 INFO  (qtp717356484-22) [   x:application] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-10-18 18:33:52.229 INFO  (qtp717356484-22) [   x:application] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-10-18 18:33:52.230 INFO  (qtp717356484-22) [   x:application] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-10-18 18:33:52.237 INFO  (qtp717356484-22) [   x:application] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-10-18 18:33:52.237 INFO  (qtp717356484-22) [   x:application] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-10-18 18:33:52.251 INFO  (qtp717356484-22) [   x:application] o.a.s.s.SolrIndexSearcher Opening [Searcher@17ea89f0[application] main]
+2017-10-18 18:33:52.264 INFO  (qtp717356484-22) [   x:application] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/conf
+2017-10-18 18:33:52.289 INFO  (qtp717356484-22) [   x:application] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-10-18 18:33:52.294 INFO  (qtp717356484-22) [   x:application] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-10-18 18:33:52.301 INFO  (qtp717356484-22) [   x:application] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-10-18 18:33:52.337 INFO  (searcherExecutor-7-thread-1-processing-x:application) [   x:application] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@17ea89f0[application] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-18 18:33:52.337 INFO  (searcherExecutor-7-thread-1-processing-x:application) [   x:application] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-10-18 18:33:52.337 INFO  (searcherExecutor-7-thread-1-processing-x:application) [   x:application] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-10-18 18:33:52.340 INFO  (qtp717356484-22) [   x:application] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1581621321232547840
+2017-10-18 18:33:52.340 INFO  (searcherExecutor-7-thread-1-processing-x:application) [   x:application] o.a.s.c.SolrCore [application] Registered new searcher Searcher@17ea89f0[application] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-18 18:33:52.346 INFO  (qtp717356484-22) [   x:application] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=application&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=0 QTime=989
+2017-10-18 18:33:52.437 INFO  (qtp717356484-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:33:52.449 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=2
+2017-10-18 18:33:52.454 INFO  (qtp717356484-32) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=9
+2017-10-18 18:34:10.437 INFO  (qtp717356484-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:34:10.445 INFO  (qtp717356484-21) [   x:application] o.a.s.c.S.Request [application]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1508351650423} status=0 QTime=2
+2017-10-18 18:34:10.448 INFO  (qtp717356484-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=11
+2017-10-18 18:34:10.449 INFO  (qtp717356484-15) [   x:application] o.a.s.c.S.Request [application]  webapp=/solr path=/replication params={wt=json&command=details&_=1508351650424} status=0 QTime=6
+2017-10-18 18:34:10.448 INFO  (qtp717356484-16) [   x:application] o.a.s.c.S.Request [application]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1508351175644&ts=1508351175644} status=503 QTime=3
+2017-10-18 18:34:10.451 INFO  (qtp717356484-32) [   x:application] o.a.s.c.S.Request [application]  webapp=/solr path=/admin/system params={wt=json&_=1508351650423} status=0 QTime=7
+2017-10-18 18:36:38.458 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:36:38.463 INFO  (qtp717356484-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=3
+2017-10-18 18:36:40.167 INFO  (qtp717356484-16) [   x:application] o.a.s.c.S.Request [application]  webapp=/solr path=/select params={q=*:*&_=1508351798377} hits=0 status=0 QTime=32
+2017-10-18 18:37:10.690 INFO  (qtp717356484-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:37:10.694 INFO  (qtp717356484-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:37:10.703 INFO  (qtp717356484-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=12
+2017-10-18 18:37:10.772 INFO  (qtp717356484-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:37:10.776 INFO  (qtp717356484-32) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:37:10.778 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=4
+2017-10-18 18:37:13.870 INFO  (qtp717356484-31) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.application, tag=null
+2017-10-18 18:37:13.870 INFO  (qtp717356484-31) [   ] o.a.s.c.SolrCore [application]  CLOSING SolrCore org.apache.solr.core.SolrCore@741a1d0e
+2017-10-18 18:37:13.871 INFO  (qtp717356484-31) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.application, tag=1947868430
+2017-10-18 18:37:13.894 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=application&action=UNLOAD&wt=json&_=1508351175644} status=0 QTime=24
+2017-10-18 18:37:13.974 INFO  (qtp717356484-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:37:13.979 INFO  (qtp717356484-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:37:13.981 INFO  (qtp717356484-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=6
+2017-10-18 18:39:13.104 INFO  (qtp717356484-41) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:39:13.116 INFO  (qtp717356484-41) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:39:13.139 INFO  (qtp717356484-41) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:39:13.157 INFO  (qtp717356484-41) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:39:13.159 INFO  (qtp717356484-41) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:39:13.162 ERROR (qtp717356484-41) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:39:13.162 INFO  (qtp717356484-41) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=57
+2017-10-18 18:40:23.637 INFO  (qtp717356484-32) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:40:23.648 INFO  (qtp717356484-32) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:40:23.666 INFO  (qtp717356484-32) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:40:23.704 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:40:23.706 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:40:23.708 ERROR (qtp717356484-32) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'float' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'float' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'float' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'float' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:40:23.708 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=71
+2017-10-18 18:40:51.797 INFO  (qtp717356484-14) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:40:51.807 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:40:51.825 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:40:51.846 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:40:51.849 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:40:51.851 ERROR (qtp717356484-14) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:40:51.851 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=54
+2017-10-18 18:41:44.454 INFO  (qtp717356484-15) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:41:44.468 INFO  (qtp717356484-15) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:41:44.491 INFO  (qtp717356484-15) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:41:44.506 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:41:44.508 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:41:44.510 ERROR (qtp717356484-15) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:41:44.511 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=57
+2017-10-18 18:41:55.591 INFO  (qtp717356484-32) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:41:55.611 INFO  (qtp717356484-32) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:41:55.649 INFO  (qtp717356484-32) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:41:55.674 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:41:55.677 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:41:55.681 ERROR (qtp717356484-32) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'plongs' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plongs' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plongs' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'plongs' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:41:55.681 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=90
+2017-10-18 18:43:36.858 INFO  (qtp717356484-14) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:43:36.875 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:43:36.899 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:43:36.919 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:43:36.921 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:43:36.924 ERROR (qtp717356484-14) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:43:36.924 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=66
+2017-10-18 18:44:39.703 INFO  (qtp717356484-15) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644
+2017-10-18 18:44:39.714 INFO  (qtp717356484-15) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:44:39.736 INFO  (qtp717356484-15) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:44:39.764 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:44:39.767 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:44:39.770 ERROR (qtp717356484-15) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:44:39.770 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/basic_configs&wt=json&_=1508351175644} status=400 QTime=67
+2017-10-18 18:47:17.822 INFO  (qtp717356484-14) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/_default&wt=json&_=1508351175644
+2017-10-18 18:47:17.834 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:47:17.859 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:47:17.886 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=default-config
+2017-10-18 18:47:18.015 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2017-10-18 18:47:18.029 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.CoreContainer Creating SolrCore 'capstone' using configuration from instancedir /home/user/Project/solr-7.0.1/server/solr/configsets/_default, trusted=true
+2017-10-18 18:47:18.029 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-10-18 18:47:18.029 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.SolrCore [[capstone] ] Opening new SolrCore at [/home/user/Project/solr-7.0.1/server/solr/configsets/_default], dataDir=[/home/user/Project/solr/data/]
+2017-10-18 18:47:18.312 INFO  (qtp717356484-14) [   x:capstone] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-10-18 18:47:18.363 INFO  (qtp717356484-14) [   x:capstone] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-10-18 18:47:18.363 INFO  (qtp717356484-14) [   x:capstone] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-10-18 18:47:18.364 INFO  (qtp717356484-14) [   x:capstone] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-10-18 18:47:18.365 INFO  (qtp717356484-14) [   x:capstone] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-10-18 18:47:18.366 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.SolrIndexSearcher Opening [Searcher@47327419[capstone] main]
+2017-10-18 18:47:18.367 INFO  (qtp717356484-14) [   x:capstone] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/user/Project/solr-7.0.1/server/solr/configsets/_default/conf
+2017-10-18 18:47:18.367 INFO  (qtp717356484-14) [   x:capstone] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-10-18 18:47:18.368 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-10-18 18:47:18.369 INFO  (qtp717356484-14) [   x:capstone] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-10-18 18:47:18.370 INFO  (searcherExecutor-12-thread-1-processing-x:capstone) [   x:capstone] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@47327419[capstone] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-18 18:47:18.370 INFO  (searcherExecutor-12-thread-1-processing-x:capstone) [   x:capstone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-10-18 18:47:18.370 INFO  (searcherExecutor-12-thread-1-processing-x:capstone) [   x:capstone] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-10-18 18:47:18.370 INFO  (searcherExecutor-12-thread-1-processing-x:capstone) [   x:capstone] o.a.s.c.SolrCore [capstone] Registered new searcher Searcher@47327419[capstone] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-18 18:47:18.370 INFO  (qtp717356484-14) [   x:capstone] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1581622166416261120
+2017-10-18 18:47:18.372 INFO  (qtp717356484-14) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/_default&wt=json&_=1508351175644} status=0 QTime=549
+2017-10-18 18:47:18.485 INFO  (qtp717356484-32) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:47:18.492 INFO  (qtp717356484-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=6
+2017-10-18 18:47:18.497 INFO  (qtp717356484-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:49:36.863 INFO  (qtp717356484-21) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.capstone, tag=null
+2017-10-18 18:49:36.864 INFO  (qtp717356484-21) [   ] o.a.s.c.SolrCore [capstone]  CLOSING SolrCore org.apache.solr.core.SolrCore@72c0639b
+2017-10-18 18:49:36.864 INFO  (qtp717356484-21) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.capstone, tag=1925211035
+2017-10-18 18:49:36.868 INFO  (qtp717356484-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=capstone&action=UNLOAD&wt=json&_=1508351175644} status=0 QTime=5
+2017-10-18 18:49:36.987 INFO  (qtp717356484-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:49:36.992 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 18:49:36.996 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=7
+2017-10-18 18:56:21.558 INFO  (qtp717356484-32) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/capstone&wt=json&_=1508351175644
+2017-10-18 18:56:21.569 INFO  (qtp717356484-32) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:56:21.590 INFO  (qtp717356484-32) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:56:21.608 WARN  (qtp717356484-32) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema has been upgraded to managed, but the non-managed schema schema.xml is still loadable.  PLEASE REMOVE THIS FILE.
+2017-10-18 18:56:21.617 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=default-config
+2017-10-18 18:56:21.724 ERROR (qtp717356484-32) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/capstone'
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/capstone/conf/managed-schema: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/capstone'
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/capstone/conf/managed-schema: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/capstone'
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/capstone'
+	at org.apache.solr.schema.ManagedIndexSchema.informResourceLoaderAwareObjectsInChain(ManagedIndexSchema.java:1321)
+	at org.apache.solr.schema.ManagedIndexSchema.informResourceLoaderAwareObjectsForFieldType(ManagedIndexSchema.java:1172)
+	at org.apache.solr.schema.ManagedIndexSchema.postReadInform(ManagedIndexSchema.java:1157)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:574)
+	... 46 more
+Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'lang/contractions_it.txt' in classpath or '/home/user/Project/solr-7.0.1/server/solr/configsets/capstone'
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:407)
+	at org.apache.lucene.analysis.util.AbstractAnalysisFactory.getLines(AbstractAnalysisFactory.java:254)
+	at org.apache.lucene.analysis.util.AbstractAnalysisFactory.getWordSet(AbstractAnalysisFactory.java:243)
+	at org.apache.lucene.analysis.util.ElisionFilterFactory.inform(ElisionFilterFactory.java:59)
+	at org.apache.solr.schema.ManagedIndexSchema.informResourceLoaderAwareObjectsInChain(ManagedIndexSchema.java:1319)
+	... 49 more
+
+2017-10-18 18:56:21.725 INFO  (qtp717356484-32) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/capstone&wt=json&_=1508351175644} status=400 QTime=166
+2017-10-18 18:56:49.457 INFO  (qtp717356484-15) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/capstone&wt=json&_=1508351175644
+2017-10-18 18:56:49.466 INFO  (qtp717356484-15) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:56:49.480 INFO  (qtp717356484-15) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:56:49.497 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:56:49.500 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:56:49.503 ERROR (qtp717356484-15) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/capstone/conf/schema.xml: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/capstone/conf/schema.xml: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'long' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:56:49.503 INFO  (qtp717356484-15) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/capstone&wt=json&_=1508351175644} status=400 QTime=46
+2017-10-18 18:56:58.196 INFO  (qtp717356484-13) [   ] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/capstone&wt=json&_=1508351175644
+2017-10-18 18:56:58.204 INFO  (qtp717356484-13) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 18:56:58.221 INFO  (qtp717356484-13) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 18:56:58.242 INFO  (qtp717356484-13) [   x:capstone] o.a.s.s.ManagedIndexSchemaFactory The schema is configured as managed, but managed schema resource managed-schema not found - loading non-managed schema schema.xml instead
+2017-10-18 18:56:58.244 INFO  (qtp717356484-13) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=example
+2017-10-18 18:56:58.246 ERROR (qtp717356484-13) [   x:capstone] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'capstone': Unable to create core [capstone] Caused by: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:956)
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:91)
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:384)
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:389)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:174)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:745)
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:726)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:507)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:378)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:322)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [capstone]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1022)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:920)
+	... 37 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core capstone: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/capstone/conf/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1002)
+	... 38 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/user/Project/solr-7.0.1/server/solr/configsets/capstone/conf/schema.xml: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 39 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'plong' specified on field _ts
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 46 more
+
+2017-10-18 18:56:58.247 INFO  (qtp717356484-13) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=/home/user/Project/solr/data&name=capstone&action=CREATE&config=solrconfig.xml&instanceDir=/home/user/Project/solr-7.0.1/server/solr/configsets/capstone&wt=json&_=1508351175644} status=400 QTime=50
+2017-10-18 19:04:14.765 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=5
+2017-10-18 19:04:14.786 INFO  (qtp717356484-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=5
+2017-10-18 19:04:14.796 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=capstone&action=STATUS&wt=json} status=0 QTime=0
+2017-10-18 19:04:28.256 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 19:04:28.275 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=4
+2017-10-18 19:04:28.284 INFO  (qtp717356484-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/properties params={wt=json&_=1508353468249} status=0 QTime=0
+2017-10-18 19:04:29.019 INFO  (qtp717356484-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 19:04:29.025 INFO  (qtp717356484-32) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508351175644} status=0 QTime=5
+2017-10-18 19:04:29.033 INFO  (qtp717356484-31) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508351175644} status=0 QTime=0
+2017-10-18 19:04:34.363 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=959869407
+2017-10-18 19:04:34.363 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2017-10-18 19:04:34.363 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2017-10-18 19:04:34.364 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
