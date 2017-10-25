@@ -1,0 +1,141 @@
+doctype html
+//
+  Projection by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  style.
+    .left {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 20%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    .center {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 60%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    .right {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 20%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+  | &#x9;
+  head
+    title Home
+    | &#x9;&#x9;
+    meta(charset='utf-8')
+    | &#x9;&#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='css/main.css')
+  | &#x9;
+  body
+    // Header
+    header#header
+      .inner
+        a.logo(href='/index')
+          strong Projection
+          |  by TEMPLATED
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        nav#nav
+          a(href='/index') Home
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='/generic') Log In
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='/search') Search Documents
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    // Banner
+    section#banner
+      .inner
+        header
+          img(src='images/film.png', alt='film_pic', width='90', height='90')
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          h1 Welcome to Micro History
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        .flex
+          p &quot;Insert text here&quot;
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        footer
+    // Three
+    section#three.wrapper.align-center
+      .inner
+        .flex.flex-2
+          article
+            .image.round
+              img(src='images/pic01.jpg', alt='Pic 01')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            header
+              h3
+                | Need to contact a developer or admin?
+                br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | Click the link below and leave an email and well contact you ASAP!
+              br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            footer
+              a.button(href='/contact') Contact Us
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          article
+            .image.round
+              img(src='images/pic02.jpg', alt='Pic 02')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            header
+              h3
+                | Learn more about our project!
+                br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p Click the link below to read about us.
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            footer
+              a.button(href='/about') Learn More
+    // Footer
+    //
+      <footer id="footer">
+      <div class="inner">
+      <h3>Get in touch</h3>
+      <form action="#" method="post">
+      <div class="field half first">
+      <label for="name">Name</label>
+      <input name="name" id="name" type="text" placeholder="Name">
+      </div>
+      <div class="field half">
+      <label for="email">Email</label>
+      <input name="email" id="email" type="email" placeholder="Email">
+      </div>
+      <div class="field">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+      </div>
+      <ul class="actions">
+      <li><input value="Send Message" class="button alt" type="submit"></li>
+      </ul>
+      </form>
+      <div class="copyright">
+      &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+      </div>
+      </div>
+      </footer>
+    // Scripts
+    script(src='js/views/jquery.min.js')
+    | &#x9;&#x9;&#x9;
+    script(src='js/views/skel.min.js')
+    | &#x9;&#x9;&#x9;
+    script(src='js/views/util.js')
+    | &#x9;&#x9;&#x9;
+    script(src='js/views/main.js')

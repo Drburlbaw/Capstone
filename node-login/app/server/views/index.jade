@@ -1,0 +1,80 @@
+doctype html
+//
+  Projection by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  style.
+    .left {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 20%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    .center {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 60%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    .right {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 20%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+
+
+  head
+    title My Services
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+  | &#x9;
+  body
+    // Header
+    header#header
+      .inner
+        a.logo(href='index')
+          strong Projection
+          |  by TEMPLATED
+        nav#nav
+          a(href='index') Home
+          a(href='generic') My Documents
+          a(href='elements') Account
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    // Banner
+    section#banner
+      .inner
+        .banner1
+          header
+            img(src='images/film.png', alt='film_pic', width='90', height='90')
+            h1 Welcome to Micro History
+          .flex
+            div
+              button#search_btn(onclick="location.href='search';", type='button', value='search')
+                p Search
+              p Search For A Document
+            div
+              button#upload_btn(onclick="location.href='upload';", type='button', value='upload')
+                p Upload
+              p Upload New Documents
+            div
+              button#edit_btn(onclick="location.href='edit';", type='button', value='edit')
+                p Edit
+              p Edit Documents
+    // Scripts
+    script(src='js/jquery.min.js')
+    script(src='js/skel.min.js')
+    script(src='js/util.js')
+    script(src='js/main.js')

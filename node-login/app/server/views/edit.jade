@@ -1,0 +1,118 @@
+doctype html
+
+html
+  style.
+    form {
+    text-align: center;
+    display: inline;
+    padding: 100px;
+    }
+    input{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border-radius: 30px;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    }
+    select{
+    background-color: #FFFEFF;
+    color: ##9a9a9a !important;
+    border: 3px;
+    width:400px;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    }
+    h3{
+    color:white !important;
+    text-align: center;
+    }
+    .selectWrapper{
+    border-radius:30px;
+    width:400px;
+    overflow:hidden;
+    background:#cccccc;
+    border:3px solid #80BD93;
+    text-align: center !important;
+    position: center !important;
+    }
+    .selectBox{
+    width:395px;
+    height:40px;
+    border:0px;
+    outline:none;
+    text-align: center !important;
+    }
+    .columnLeft {
+    float: left;
+    width: 55%;
+    border-right: solid;
+    }
+    .columnRight{
+    float: right;
+    width: 45%;
+    background-color: #595866;
+    height:1110px;
+    text-align: center !important;
+    }
+  head
+    title View
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+  body.subpage
+    
+    header#header
+      .inner
+        a.logo(href='index.html')
+          strong Projection
+          |  by TEMPLATED
+        nav#nav
+          a(href='index.html') Home
+          a(href='generic.html') My Documents
+          a(href='elements.html') Account
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    section
+      .columnLeft
+        embed(src='images/Ex2.pdf', width='100%', height='1110px')
+      .columnRight
+        h3 Add Information to the Form
+        script(src='js/views/edit.js', language='Javascript', type='text/javascript')
+        form(action='#', method='post', id='form1')
+          .selectWrapper
+            select.selectBox
+              option(value='') -Form Type-
+              option(value='') WPA
+              option(value='') APA
+          div 
+            input#docNum(type='text', placeholder='Document Number')
+          div
+            input#email(name='email', type='email', placeholder='Email')
+          div
+            input#name(name='name', type='text', placeholder='Other1')
+          div
+            input#name(name='name', type='text', placeholder='Other2')
+          div
+            #divname
+          div
+            input(type='button', value='test', onclick="addInput('divname');")
+          div
+            input(type='button', value='test done', onclick="done();")
+          p
+          ul.actions
+            li
+              input.button.alt(value='Done', type='submit')
+    //Scripts
+      <script src="js/jquery.min.js"></script>
+      <script src="js/skel.min.js"></script>
+      <script src="js/util.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/edit.js"></script>
+      </body>
+      </html>
+
