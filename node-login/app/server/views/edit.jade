@@ -5,7 +5,7 @@ html
     form {
     text-align: center;
     display: inline;
-    padding: 100px;
+    justify-content:space-between;
     }
     input{
     background-color: #FFFEFF;
@@ -24,7 +24,6 @@ html
     height: 40px;
     border-radius: 5px;
     display: block;
-    margin: 0 auto;
     text-align: center;
     }
     h3{
@@ -38,7 +37,9 @@ html
     background:#cccccc;
     border:3px solid #80BD93;
     text-align: center !important;
-    position: center !important;
+    position: relative !important:
+    -ms-transform: translateY(-50%);
+    display: inline-block;
     }
     .selectBox{
     width:395px;
@@ -46,6 +47,7 @@ html
     border:0px;
     outline:none;
     text-align: center !important;
+    display: inline;
     }
     .columnLeft {
     float: left;
@@ -59,6 +61,11 @@ html
     height:1110px;
     text-align: center !important;
     }
+    label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    }​
   head
     title View
     meta(charset='utf-8')
@@ -84,19 +91,21 @@ html
         h3 Add Information to the Form
         script(src='js/views/edit.js', language='Javascript', type='text/javascript')
         form(action='#', method='post', id='form1')
+            label Document Type
           .selectWrapper
             select.selectBox
               option(value='') -Form Type-
               option(value='') WPA
               option(value='') APA
-          div 
+          div
+            label Document Number
             input#docNum(type='text', placeholder='Document Number')
           div
+            label Email
             input#email(name='email', type='email', placeholder='Email')
           div
-            input#name(name='name', type='text', placeholder='Other1')
-          div
-            input#name(name='name', type='text', placeholder='Other2')
+            label Date
+            input#f_date(name='date', type='date')
           div
             #divname
           div
