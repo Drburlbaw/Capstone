@@ -1,0 +1,21 @@
+{
+  "name": "user",
+  "version": "1.0.0",
+  "description": "Capstone Project",
+  "main": ".mongorc.js",
+  "dependencies": {
+    "emailjs": "^1.0.12",
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "moment": "^2.19.0",
+    "mongodb": "^2.2.31",
+    "pdf-viewer": "^0.8.1",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm install -g npm@latest"
+  },
+  "author": "",
+  "license": "ISC"
+}

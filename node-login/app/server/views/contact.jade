@@ -1,0 +1,79 @@
+doctype html
+//
+  Projection by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  style.
+    form {
+    text-align: center;
+    display: inline;
+    padding: 100px;
+    }
+    input{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border-radius: 30px;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    }
+    select{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    -webkit-appearance: menulist-button;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    }
+    textarea{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+    }
+  head
+    title Contact Us
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='assets/css/main.css')
+  body.subpage
+    header#header
+      .inner
+        a.logo(href='index.html')
+          strong 
+        nav#nav
+          a(href='index') Home
+          a(href='mydocs') My Documents
+          a(href='elements') Account
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    // Footer
+    footer#footer
+      .inner
+        h3(style='text-align: center;') Get in touch
+        form(action='#', method='post')
+          .field.half.first
+            input#name(name='name', type='text', placeholder='Name')
+          .field.half
+            input#email(name='email', type='email', placeholder='Email')
+          .field
+            textarea#message(name='message', rows='6', placeholder='Message')
+          ul.actions
+            li
+              input.button.alt(href='#', value='Send Message', type='submit')
+    // Scripts
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/skel.min.js')
+    script(src='assets/js/util.js')
+    script(src='assets/js/main.js')

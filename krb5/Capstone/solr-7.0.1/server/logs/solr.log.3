@@ -1,0 +1,53 @@
+2017-10-18 19:04:55.258 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-10-18 19:04:55.497 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.1
+2017-10-18 19:04:55.497 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-10-18 19:04:55.497 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/user/Project/solr-7.0.1, Default config dir: /home/user/Project/solr-7.0.1/server/solr/configsets/_default/conf
+2017-10-18 19:04:55.509 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-10-18T19:04:55.498Z
+2017-10-18 19:04:55.510 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-10-18 19:04:55.521 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/user/Project/solr-7.0.1/server/solr
+2017-10-18 19:04:55.525 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/user/Project/solr-7.0.1/server/solr/solr.xml
+2017-10-18 19:04:55.878 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /home/user/Project/solr-7.0.1/server/solr
+2017-10-18 19:04:55.908 INFO  (main) [   ] o.e.j.s.Server Started @964ms
+2017-10-18 19:04:59.955 INFO  (qtp717356484-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=23
+2017-10-18 19:04:59.987 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=3
+2017-10-18 19:05:00.001 INFO  (qtp717356484-17) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2017-10-18 19:05:00.001 INFO  (qtp717356484-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=capstone&action=STATUS&wt=json} status=0 QTime=1
+2017-10-18 19:05:00.018 INFO  (qtp717356484-18) [   ] o.a.s.h.a.CoreAdminOperation core create command name=capstone&action=CREATE&instanceDir=capstone&wt=json
+2017-10-18 19:05:00.062 INFO  (qtp717356484-18) [   x:capstone] o.a.s.c.SolrResourceLoader [capstone] Added 51 libs to classloader, from paths: [/home/user/Project/solr-7.0.1/contrib/clustering/lib, /home/user/Project/solr-7.0.1/contrib/extraction/lib, /home/user/Project/solr-7.0.1/contrib/langid/lib, /home/user/Project/solr-7.0.1/contrib/velocity/lib, /home/user/Project/solr-7.0.1/dist]
+2017-10-18 19:05:00.166 INFO  (qtp717356484-18) [   x:capstone] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.1
+2017-10-18 19:05:00.272 INFO  (qtp717356484-18) [   x:capstone] o.a.s.s.IndexSchema [capstone] Schema name=default-config
+2017-10-18 19:05:00.591 INFO  (qtp717356484-18) [   x:capstone] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2017-10-18 19:05:00.612 INFO  (qtp717356484-18) [   x:capstone] o.a.s.c.CoreContainer Creating SolrCore 'capstone' using configuration from instancedir /home/user/Project/solr-7.0.1/server/solr/capstone, trusted=true
+2017-10-18 19:05:00.625 INFO  (qtp717356484-18) [   x:capstone] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-10-18 19:05:00.628 INFO  (qtp717356484-18) [   x:capstone] o.a.s.c.SolrCore [[capstone] ] Opening new SolrCore at [/home/user/Project/solr-7.0.1/server/solr/capstone], dataDir=[/home/user/Project/solr-7.0.1/server/solr/capstone/data/]
+2017-10-18 19:05:00.746 INFO  (qtp717356484-18) [   x:capstone] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-10-18 19:05:00.953 INFO  (qtp717356484-18) [   x:capstone] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-10-18 19:05:00.953 INFO  (qtp717356484-18) [   x:capstone] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-10-18 19:05:00.959 INFO  (qtp717356484-18) [   x:capstone] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-10-18 19:05:00.960 INFO  (qtp717356484-18) [   x:capstone] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-10-18 19:05:00.973 INFO  (qtp717356484-18) [   x:capstone] o.a.s.s.SolrIndexSearcher Opening [Searcher@3c731c9c[capstone] main]
+2017-10-18 19:05:00.980 INFO  (qtp717356484-18) [   x:capstone] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/user/Project/solr-7.0.1/server/solr/capstone/conf
+2017-10-18 19:05:00.991 INFO  (qtp717356484-18) [   x:capstone] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-10-18 19:05:00.995 INFO  (qtp717356484-18) [   x:capstone] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-10-18 19:05:01.003 INFO  (qtp717356484-18) [   x:capstone] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-10-18 19:05:01.042 INFO  (searcherExecutor-7-thread-1-processing-x:capstone) [   x:capstone] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3c731c9c[capstone] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-18 19:05:01.042 INFO  (searcherExecutor-7-thread-1-processing-x:capstone) [   x:capstone] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-10-18 19:05:01.042 INFO  (searcherExecutor-7-thread-1-processing-x:capstone) [   x:capstone] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-10-18 19:05:01.044 INFO  (qtp717356484-18) [   x:capstone] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1581623280710713344
+2017-10-18 19:05:01.045 INFO  (searcherExecutor-7-thread-1-processing-x:capstone) [   x:capstone] o.a.s.c.SolrCore [capstone] Registered new searcher Searcher@3c731c9c[capstone] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-18 19:05:01.052 INFO  (qtp717356484-18) [   x:capstone] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=capstone&action=CREATE&instanceDir=capstone&wt=json} status=0 QTime=1033
+2017-10-18 19:05:55.080 INFO  (qtp717356484-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508353554921} status=0 QTime=0
+2017-10-18 19:05:55.087 INFO  (qtp717356484-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508353554922} status=0 QTime=5
+2017-10-18 19:05:55.098 INFO  (qtp717356484-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508353554922} status=0 QTime=6
+2017-10-18 19:06:06.551 INFO  (qtp717356484-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508353554921} status=0 QTime=0
+2017-10-18 19:06:06.557 INFO  (qtp717356484-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508353554922} status=0 QTime=4
+2017-10-18 19:06:06.570 INFO  (qtp717356484-21) [   x:capstone] o.a.s.c.S.Request [capstone]  webapp=/solr path=/replication params={wt=json&command=details&_=1508353566530} status=0 QTime=4
+2017-10-18 19:06:06.571 INFO  (qtp717356484-14) [   x:capstone] o.a.s.c.S.Request [capstone]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1508353566529} status=0 QTime=5
+2017-10-18 19:06:06.572 INFO  (qtp717356484-16) [   x:capstone] o.a.s.c.S.Request [capstone]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1508353554922&ts=1508353554922} status=503 QTime=1
+2017-10-18 19:06:06.576 INFO  (qtp717356484-35) [   x:capstone] o.a.s.c.S.Request [capstone]  webapp=/solr path=/admin/system params={wt=json&_=1508353566529} status=0 QTime=4
+2017-10-18 19:08:26.819 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=959869407
+2017-10-18 19:08:26.819 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2017-10-18 19:08:26.819 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2017-10-18 19:08:26.819 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2017-10-18 19:08:26.820 INFO  (coreCloseExecutor-12-thread-1) [   x:capstone] o.a.s.c.SolrCore [capstone]  CLOSING SolrCore org.apache.solr.core.SolrCore@75d185a1
+2017-10-18 19:08:26.820 INFO  (coreCloseExecutor-12-thread-1) [   x:capstone] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.capstone, tag=1976665505

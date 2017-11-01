@@ -1,0 +1,4 @@
+[submodule "Capstone"]
+	path = Capstone
+	url = https://github.com/thomaskelm/Capstone
+	branch = master

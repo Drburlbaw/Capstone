@@ -1,0 +1,208 @@
+doctype html
+//
+  Projection by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  style.
+    #banner{
+        background-image: url(../../images/macys-pic.jpg);
+    }
+    .left {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 20%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    .center {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 60%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    .right {
+    padding:20px;
+    float:left;
+    width:33%;/*The width is 20%, by default*/
+    text-align:center;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    }
+    footer{
+    background-color: #595866 !important;
+    }
+    .columnLeft {
+    float: left;
+    width: 50%;
+    border-right: solid;
+    background-color: #595866;
+    }
+    .columnRight{
+    float: right;
+    width: 50%;
+    background-color: #595866;
+    }
+    .columnCenter {
+    background-color: #595866 !important;
+    text-align: center !important;
+    height: 100%;
+    }
+
+
+    .flip-container {
+      -webkit-perspective: 1000px;
+      position: center;
+      text-align: center !important;
+    }
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+      -webkit-transform: rotateY(180deg);
+      position: center;
+      text-align: center !important;
+    }
+
+    .flip-container, .front, .back {
+      width: 100%;
+      height: 320px;
+      position: center;
+      text-align: center !important;
+    }
+
+    .flipper {
+      -webkit-transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+      position: relative;
+      text-align: center !important;
+    }
+
+    .front, .back {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center !important;
+    }
+
+    .front {
+      z-index: 2;
+      -webkit-transform: rotateY(0deg);
+      position: center;
+      text-align: center !important;
+    }
+
+    .back {
+      -webkit-transform: rotateY(180deg);
+      position: center;
+      text-align: center !important;
+    }
+
+
+
+
+
+
+
+
+  head
+    title My Services
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+  body
+    // Header
+    header#header
+      .inner
+        nav#nav
+          a(href='index') Home
+          a(href='mydocs') My Documents
+          a(href='elements') Account
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    // Banner
+    section#banner
+      .inner
+        .banner1
+          header
+            img(src='images/film.png', alt='film_pic', width='90', height='90')
+            h1 Welcome to Micro History
+          .flex
+            div
+              button#search_btn(onclick="location.href='search';", type='button', value='search')
+                p Search
+              p Search For A Document
+            div
+              button#upload_btn(onclick="location.href='upload';", type='button', value='upload')
+                p Upload
+              p Upload New Documents
+    footer#footer
+          .columnCenter
+            h3 Recent Activity
+          .columnLeft
+            .flip-container(ontouchstart="this.classList.toggle('hover');")
+              .flipper
+                .front
+                    p Form Number: XXXXXXXX
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+                    p
+                .back
+                    p Form Number: 222222222
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+            .flip-container(ontouchstart="this.classList.toggle('hover');")
+              .flipper
+                .front
+                    p Form Number: XXXXXXXX
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+                    p
+                .back
+                    p Form Number: 222222222
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+          .columnRight
+            .flip-container(ontouchstart="this.classList.toggle('hover');")
+              .flipper
+                .front
+                    p Form Number: XXXXXXXX
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+
+                .back
+                    p Form Number: 222222222
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+            .flip-container(ontouchstart="this.classList.toggle('hover');")
+              .flipper
+                .front
+                    p Form Number: XXXXXXXX
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+                    p
+                .back
+                    p Form Number: 222222222
+                    p Date: XX/XX/XX
+                    button#upload_btn(onclick="", type='button', value='upload')
+                      p Edit
+
+
+
+                // Scripts
+    script(src='js/jquery.min.js')
+    script(src='js/skel.min.js')
+    script(src='js/util.js')
+    script(src='js/main.js')
+    script(src='js/index.js')

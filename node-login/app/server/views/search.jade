@@ -1,0 +1,148 @@
+doctype html
+//
+  Projection by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  style.
+    form {
+    text-align: center;
+    display: inline;
+    padding: 100px;
+    }
+    input{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border-radius: 30px;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    }
+    select{
+    background-color: #FFFEFF;
+    color: #9a9a9a !important;
+    border:3px solid #80BD93;
+    padding:10px;
+    width:400px;
+    height: 40px;
+    border-radius: 5px;
+    }
+    .selectWrapper{
+    border-radius:30px;
+    display:inline-block;
+    overflow:hidden;
+    background:#cccccc;
+    border:1px solid #cccccc;
+    }
+    .selectBox{
+    width:395px;
+    height:40px;
+    border:0px;
+    outline:none;
+    }
+    input[type=date]{
+      width:200px;
+    }
+    .columnCenter {
+    background-color: #595866 !important;
+    text-align: center !important;
+    height: 100%;
+    }
+
+    p {
+      width:200px;
+      display:inline-block;
+      height:0px;
+    }
+    footer{
+    background-color: #595866 !important;
+    }
+  head
+    title Search
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+     
+  body.subpage
+    header#header
+      .inner
+        nav#nav
+          a(href='index') Home
+                       
+          a(href='mydocs') My Documents
+                       
+          a(href='upload') Upload
+
+          a(href='elements') Account
+          
+          a(href='about') About
+                   
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+           
+    footer#footer
+      .inner
+        h3 Search For A Document
+        form(action='#', method='post')
+          .selectWrapper
+            select.selectBox
+              option(value='') -Form Type-
+              option(value='') WPA       
+              option(value='') APA
+                       
+          .field.half.first
+            input#docNum(name='doc num', type='text', placeholder='Document Number')
+                       
+          .field.half.first
+            p From
+            p To
+          .field.half
+            input#f_date(name='date', type='date', placeholder='From Date')
+            input#t_date(name='date', type='date', placeholder='To Date')
+                       
+          .field.half.first
+            input#name(name='name', type='text', placeholder='Other1')
+                       
+          .field.half.first
+            input#name(name='name', type='text', placeholder='Other2')
+          p
+          ul.actions
+            li
+              input.button.alt(value='Search', type='submit')
+        footer#footer
+          hr
+        .columnCenter
+          p Sort By:
+          div
+           .selectWrapper
+            select.selectBox
+              option(value='') Newest First
+              option(value='') Oldest First
+              option(value='') A-Z
+              option(value='') Z-A
+          div
+          p
+          div
+          p Form Number: XXXXXXXX
+          p Date: XX/XX/XX
+          button#upload_btn(onclick="location.href='edit';", type='button', value='edit')
+            p Edit
+          div
+          p
+          div
+          p Form Number: XXXXXXXX
+          p Date: XX/XX/XX
+          button#upload_btn(onclick="location.href='edit';", type='button', value='edit')
+            p Edit
+
+
+
+
+      //Scripts
+      <script src="js/jquery.min.js"></script>
+      <script src="js/skel.min.js"></script>
+      <script src="js/util.js"></script>
+      <script src="js/main.js"></script>
+      </body>
+      </html>
