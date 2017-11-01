@@ -54,14 +54,14 @@ html
 
 
     .flip-container {
-      perspective: 1000px;
+      -webkit-perspective: 1000px;
       position: center;
-          text-align: center !important;
+      text-align: center !important;
     }
     .flip-container:hover .flipper, .flip-container.hover .flipper {
-      transform: rotateY(180deg);
-       position: center;
-           text-align: center !important;
+      -webkit-transform: rotateY(180deg);
+      position: center;
+      text-align: center !important;
     }
 
     .flip-container, .front, .back {
@@ -72,14 +72,14 @@ html
     }
 
     .flipper {
-      transition: 0.6s;
-      transform-style: preserve-3d;
+      -webkit-transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
       position: relative;
       text-align: center !important;
     }
 
     .front, .back {
-      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       position: absolute;
       top: 0;
       left: 0;
@@ -88,13 +88,13 @@ html
 
     .front {
       z-index: 2;
-      transform: rotateY(0deg);
+      -webkit-transform: rotateY(0deg);
       position: center;
       text-align: center !important;
     }
 
     .back {
-      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
       position: center;
       text-align: center !important;
     }
