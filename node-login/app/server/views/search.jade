@@ -25,9 +25,7 @@ html
     border:3px solid #80BD93;
     padding:10px;
     width:400px;
-    /*-webkit-appearance: menulist-button;*/
     height: 40px;
-    /*  -webkit-border-radius: 30px;*/
     border-radius: 5px;
     }
     .selectWrapper{
@@ -46,10 +44,19 @@ html
     input[type=date]{
       width:200px;
     }
+    .columnCenter {
+    background-color: #595866 !important;
+    text-align: center !important;
+    height: 100%;
+    }
+
     p {
       width:200px;
       display:inline-block;
       height:0px;
+    }
+    footer{
+    background-color: #595866 !important;
     }
   head
     title Search
@@ -60,14 +67,10 @@ html
   body.subpage
     header#header
       .inner
-        a.logo(href='index')
-          strong Projection
-            by TEMPLATED
-                   
         nav#nav
           a(href='index') Home
                        
-          a(href='generic') My Documents
+          a(href='mydocs') My Documents
                        
           a(href='upload') Upload
 
@@ -81,7 +84,6 @@ html
     footer#footer
       .inner
         h3 Search For A Document
-                   
         form(action='#', method='post')
           .selectWrapper
             select.selectBox
@@ -104,12 +106,39 @@ html
                        
           .field.half.first
             input#name(name='name', type='text', placeholder='Other2')
-                       
           p
-                       
           ul.actions
             li
               input.button.alt(value='Search', type='submit')
+        footer#footer
+          hr
+        .columnCenter
+          p Sort By:
+          div
+           .selectWrapper
+            select.selectBox
+              option(value='') Newest First
+              option(value='') Oldest First
+              option(value='') A-Z
+              option(value='') Z-A
+          div
+          p
+          div
+          p Form Number: XXXXXXXX
+          p Date: XX/XX/XX
+          button#upload_btn(onclick="location.href='edit';", type='button', value='edit')
+            p Edit
+          div
+          p
+          div
+          p Form Number: XXXXXXXX
+          p Date: XX/XX/XX
+          button#upload_btn(onclick="location.href='edit';", type='button', value='edit')
+            p Edit
+
+
+
+
       //Scripts
       <script src="js/jquery.min.js"></script>
       <script src="js/skel.min.js"></script>

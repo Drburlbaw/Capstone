@@ -4,30 +4,33 @@ doctype html
   templated.co @templatedco
   Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 html
+  style.
+    section{
+    background-color: #595866 !important;
+    }
+    h2{
+    color:white !important;
+    text-align: center;
+    }
+
+
+
   head
-    title Generic - Projection by TEMPLATED
-    | &#x9;&#x9;
+    title About Us
     meta(charset='utf-8')
-    | &#x9;&#x9;
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    | &#x9;&#x9;
-    link(rel='stylesheet', href='assets/css/main.css')
-  | &#x9;
+    link(rel='stylesheet', href='css/main.css')
   body.subpage
     // Header
     header#header
       .inner
         a.logo(href='index.html')
-          strong Projection
-          |  by TEMPLATED
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
         nav#nav
-          a(href='index.html') Home
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-          a(href='generic.html') Generic
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-          a(href='elements.html') Elements
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='index') Home
+          a(href='mydocs') My Documents
+          a(href='search') Search
+          a(href='upload') Upload
+          a(href='elements') Account
         a.navPanelToggle(href='#navPanel')
           span.fa.fa-bars
     // Three
@@ -35,28 +38,17 @@ html
       .inner
         header.align-center
           h2 About Us
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-          p What were all about.
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
-        .image.round.left
-          img(src='images/pic01.jpg', alt='Pic 01')
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
-        p
-          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
-        .image.round.right
-          img(src='images/pic02.jpg', alt='Pic 02')
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
-        p
-          | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
-        p
-          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+          p What we're all about.
+        p A wealth of historical information is still confined in analog formats, despite the proliferation of networked computers and digitization tools. This information is inaccessible to historians and prone to permanent expiry. In recent years there have been significant efforts to address this problem by digitizing collections of traditional media, such as books, photographs, newspapers, and microfilm. These efforts involve associating computer metadata with the digitized documents to allow for cataloging and searching historical document databases. 
+        p Metadata is generated via a combination of automatic computer processes and human input. Metadata may include text information such as names, titles, and locations, date information, indexing data, and so on. Due to the differing characteristics of document collections, the composition of metadata varies between document collections. Considering this diversity and the substantial size of many document collections, it is often desirable to custom-tailor software solutions to facilitate populating document metadata fields.
+        p Texas A&M University’s collection of Depression-era New Deal documents are currently stored on microfilm. The collection comprises over nine hundred reels of microfilm containing thousands of document images that detail New Deal projects conducted in Texas. The documents provide a wealth of historical data that in its current form is difficult to access and organize and vulnerable to permanent loss. Hence, researchers have pushed an ongoing digitization effort. We report on a software solution consisting of a website and underlying database that allows historians to browse the documents efficiently. Our objective is to enable historians to efficiently organize, annotate, search and collate digital versions of the document collection.
+        p Prior solutions to similar projects involved maintaining electronic spreadsheets linked to document collections and manually transcribing data from raw document images into corresponding spreadsheet fields. This method may be satisfactory for small projects but is cumbersome for more massive document sets, especially when online availability for multiple transcribers or viewers is required. Our solution, organized as a client-facing website and a server-side database, coordinates and expedites efforts to input document-associated metadata and allows for multiple users to remotely and simultaneously access and transcribe documents.
+        p The structure of our database accounts for the number and composition of the documents. The Texas New Deal collection includes thousands of documents based on different forms, which vary depending on the project and agency. Each form type has a unique format and data fields. Researchers may also desire to dynamically modify or update metadata fields associated with different document forms. Therefore, we implemented a non-relational document database, which is well-suited for dynamic and varied data. The non-relational database also aids in search functionality and data clustering based on individual New Deal projects. We test the database using a basic reliability test.
+        p The client-facing website is designed to facilitate human interaction with documents and their associated digitized information, abstracting viewers and transcribers from the underlying metadata structures. Users can upload digital document images produced by scanning microfilm. Users can then tag documents with form types, which link documents to the desired arrangements of data fields. Due to the varied formats and poor quality of the microfilm, optical character recognition techniques proved implausible. Therefore, the data fields must be manually populated. The website’s data entry page arranges raw document images beside their associated data fields so that transcribers can efficiently input digital information. We test the website by surveying and timing researchers to assess their efficiency and experiences inputting data and accessing documents through the website.
+        p Our software solution addresses both the inaccessibility and imminent expiration of the Texas New Deal microfilm collection. The software provides inexpensive and immediate access to the collection online and allows for efficiently indexing, organizing, and searching the documents using editable text and numerical data. The software improves transcribers’ interactions with the data, removing unnecessary steps to populating document-associated data and metadata fields and facilitating the digitization process. Our approach expands on previous digitization projects and may be employed by future digitization projects.
+
     // Scripts
-    script(src='assets/js/jquery.min.js')
-    | &#x9;&#x9;&#x9;
-    script(src='assets/js/skel.min.js')
-    | &#x9;&#x9;&#x9;
-    script(src='assets/js/util.js')
-    | &#x9;&#x9;&#x9;
-    script(src='assets/js/main.js')
+    script(src='js/jquery.min.js')
+    script(src='js/skel.min.js')
+    script(src='js/util.js')
+    script(src='js/main.js')

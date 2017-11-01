@@ -42,55 +42,38 @@ html
     -webkit-border-radius: 5px;
     border-radius: 30px;
     }
-  | &#x9;
   head
     title Contact Us
-    | &#x9;&#x9;
     meta(charset='utf-8')
-    | &#x9;&#x9;
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    | &#x9;&#x9;
     link(rel='stylesheet', href='assets/css/main.css')
-  | &#x9;
   body.subpage
     header#header
       .inner
         a.logo(href='index.html')
-          strong Projection
-          |  by TEMPLATED
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
+          strong 
         nav#nav
-          a(href='index.html') Home
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-          a(href='generic.html') My Documents
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-          a(href='elements.html') Account
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='index') Home
+          a(href='mydocs') My Documents
+          a(href='elements') Account
         a.navPanelToggle(href='#navPanel')
           span.fa.fa-bars
     // Footer
     footer#footer
       .inner
         h3(style='text-align: center;') Get in touch
-        | &#x9;&#x9;&#x9;&#x9;&#x9;
         form(action='#', method='post')
           .field.half.first
             input#name(name='name', type='text', placeholder='Name')
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
           .field.half
             input#email(name='email', type='email', placeholder='Email')
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
           .field
             textarea#message(name='message', rows='6', placeholder='Message')
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
           ul.actions
             li
               input.button.alt(href='#', value='Send Message', type='submit')
     // Scripts
     script(src='assets/js/jquery.min.js')
-    | &#x9;&#x9;&#x9;
     script(src='assets/js/skel.min.js')
-    | &#x9;&#x9;&#x9;
     script(src='assets/js/util.js')
-    | &#x9;&#x9;&#x9;
     script(src='assets/js/main.js')

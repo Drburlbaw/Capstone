@@ -32,6 +32,26 @@ html
     display:block;
     margin:0 auto;
     }
+    footer{
+    background-color: #595866 !important;
+    }
+    .columnLeft {
+    float: left;
+    width: 50%;
+    border-right: solid;
+    background-color: #595866;
+    }
+    .columnRight{
+    float: right;
+    width: 50%;
+    background-color: #595866;
+    }
+    .columnCenter {
+    background-color: #595866 !important;
+    text-align: center !important;
+    height: 100%;
+    }
+
 
 
   head
@@ -39,17 +59,13 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/main.css')
-  | &#x9;
   body
     // Header
     header#header
       .inner
-        a.logo(href='index')
-          strong Projection
-          |  by TEMPLATED
         nav#nav
           a(href='index') Home
-          a(href='generic') My Documents
+          a(href='mydocs') My Documents
           a(href='elements') Account
         a.navPanelToggle(href='#navPanel')
           span.fa.fa-bars
@@ -69,10 +85,32 @@ html
               button#upload_btn(onclick="location.href='upload';", type='button', value='upload')
                 p Upload
               p Upload New Documents
-            div
-              button#edit_btn(onclick="location.href='edit';", type='button', value='edit')
-                p Edit
-              p Edit Documents
+    footer#footer
+          .columnCenter
+            h3 Recent Activity
+          .columnLeft
+            p Form Number: XXXXXXXX
+            p Date: XX/XX/XX
+            button#upload_btn(onclick="", type='button', value='upload')
+              p Edit
+            p
+            p Form Number: XXXXXXXX
+            p Date: XX/XX/XX
+            button#upload_btn(onclick="", type='button', value='upload')
+              p Edit
+            p
+          .columnRight
+            p Form Number: XXXXXXXX
+            p Date: XX/XX/XX
+            button#upload_btn(onclick="", type='button', value='upload')
+              p Edit
+            p
+            p Form Number: XXXXXXXX
+            p Date: XX/XX/XX
+            button#upload_btn(onclick="", type='button', value='upload')
+              p Edit
+            p
+           
     // Scripts
     script(src='js/jquery.min.js')
     script(src='js/skel.min.js')

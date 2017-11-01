@@ -51,14 +51,15 @@ html
     }
     .columnLeft {
     float: left;
-    width: 55%;
+    width: 50%;
     border-right: solid;
+    height: 800px;
     }
     .columnRight{
     float: right;
-    width: 45%;
+    width: 50%;
     background-color: #595866;
-    height:1110px;
+    height:800px;
     text-align: center !important;
     }
     label {
@@ -66,8 +67,45 @@ html
     width: 140px;
     text-align: right;
     }​
+    .formfield * {
+    vertical-align: middle;
+    }
+    textarea{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+    }
+    p {
+    width:500px;
+    height:4px;
+    display:inline-block;
+    }
+    input[type="checkbox"]{
+    width: auto;
+    text-align: center;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    }
+    .radio-label {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3%;
+    }
+    .radio-input {
+    display: inline-block;
+    vertical-align: top;
+    }
+
+
   head
-    title View
+    title Edit
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/main.css')
@@ -76,46 +114,44 @@ html
     header#header
       .inner
         a.logo(href='index.html')
-          strong Projection
-          |  by TEMPLATED
         nav#nav
           a(href='index') Home
-          a(href='generic') My Documents
+          a(href='mydocs') My Documents
           a(href='elements') Account
         a.navPanelToggle(href='#navPanel')
           span.fa.fa-bars
     section
       .columnLeft
-        embed(src='../pdfs/Malaria 1149.pdf', width='100%', height='1110px')
+        embed(src='../pdfs/Malaria 1149.pdf#zoom=50', width='100%', height='800px')
       .columnRight
+        p
         h3 Add Information to the Form
         script(src='js/views/edit.js', language='Javascript', type='text/javascript')
         form(action='#', method='post', id='form1')
-            label Document Type
-          .selectWrapper
-            select.selectBox
-              option(value='') -Form Type-
-              option(value='') WPA
-              option(value='') APA
-          div
-            label Document Number
-            input#docNum(type='text', placeholder='Document Number')
-          div
-            label Email
-            input#email(name='email', type='email', placeholder='Email')
-          div
-            label Date
-            input#f_date(name='date', type='date')
-          div
-            #divname
-          div
-            input(type='button', value='test', onclick="addInput('divname');")
-          div
-            input(type='button', value='test done', onclick="done();")
-          p
-          ul.actions
-            li
-              input.button.alt(value='Done', type='submit')
+          .inner
+            .selectWrapper
+              select.selectBox
+                option(value='') -Form Type-
+                option(value='') WPA
+                option(value='') APA
+            div
+              input#docNum(type='text', placeholder='Document Number')
+            div
+              input#f_date(name='date', type='date' , placeholder="Date")
+            div
+              p Insert the specific information in the form of "Type" : "Content"
+              textarea(name='message', rows='6', cols='75', placeholder='Type : Content , Text 2 : Content 2')
+            div
+              input(type='button', value='test done', onclick="done();")
+            div
+              input(class="radio-input" , type='checkbox', value='')
+              label(class="radio-label") Mark Complete
+              input(class="radio-input" , type='checkbox', value='')
+              label(class="radio-label") Mark For Review
+            p
+            ul.actions
+              li
+                input.button.alt(value='Done', type='submit')
     //Scripts
       <script src="js/jquery.min.js"></script>
       <script src="js/skel.min.js"></script>

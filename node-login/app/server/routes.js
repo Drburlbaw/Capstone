@@ -130,6 +130,20 @@ module.exports = function(app) {
 		res.render('edit', {  title: 'Edit Documents', countries : CT });
 	});
 
+//contact//
+	app.get('/contact', function(req, res) {
+		res.render('contact', {  title: 'Contact Us', countries : CT });
+	});
+
+//my documents//
+	app.get('/mydocs', function(req, res) {
+		res.render('mydocs', {  title: 'My Documents', countries : CT });
+	});
+
+//my documents//
+	app.get('/about', function(req, res) {
+		res.render('about', {  title: 'About', countries : CT });
+	});
 
 // password reset //
 

@@ -9,6 +9,7 @@ html
     text-align: center;
     display: inline;
     padding: 100px;
+    padding-top: 0px;
     }
     input{
     background-color: #FFFEFF;
@@ -18,16 +19,15 @@ html
     border: 3px;
     padding:10px;
     width:400px;
+    display: inline-block;
     }
     select{
     background-color: #FFFEFF;
     color: ##9a9a9a !important;
     border:3px solid #80BD93;
-    //padding:15px;
+    padding:15px;
     width:400px;
-    /*-webkit-appearance: menulist-button;*/
     height: 40px;
-    /*  -webkit-border-radius: 30px;*/
     border-radius: 5px;
     }
     .selectWrapper{
@@ -43,6 +43,21 @@ html
     border:0px;
     outline:none;
     }
+    textarea{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+    }
+    footer{
+    background-color: #595866 !important;
+    height: auto;
+    }
   head
     title Upload
     meta(charset='utf-8')
@@ -53,15 +68,19 @@ html
       .inner
         a.logo(href='index')    
         nav#nav
-          a(href='index') Home     
-          a(href='generic') My Documents
+          a(href='index') Home
+          a(href='mydocs') My Documents
+          a(href='search') Search
           a(href='elements') Account
+          a(href='about') About
         a.navPanelToggle(href='#navPanel')
           span.fa.fa-bars
     footer#footer
       .inner
         h3 Upload Documents
-        form(action='#', method='post')
+        form(action="/action_page.php", method='post')
+          .field.half
+            input(type="file" name="pdf" accept="application/pdf")
           .selectWrapper
             select.selectBox
               option(value='') -Form Type-
@@ -70,15 +89,15 @@ html
           .field.half.first
             input#name(name='name', type='text', placeholder='Document Number')
           .field.half
-            input#email(name='email', type='email', placeholder='Email')
-          .field.half.first
-            input#name(name='name', type='text', placeholder='Other1')
-          .field.half.first
-            input#name(name='name', type='text', placeholder='Other2')
+            input(name='date', type='date', placeholder="date")
+          .field
+            textarea#message(name='message', rows='6', cols="65" , placeholder='Type : Content')
+          
           p       
           ul.actions
             li
               input.button.alt(value='Upload', type='submit')
+
     //Scripts
       <script src="js/jquery.min.js"></script>
       <script src="js/skel.min.js"></script>
