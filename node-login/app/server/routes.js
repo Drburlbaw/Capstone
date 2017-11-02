@@ -2,6 +2,7 @@
 var CT = require('./modules/country-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
+var DM = require('./modules/document-manager');
 
 module.exports = function(app) {
 
@@ -126,7 +127,15 @@ module.exports = function(app) {
 // search //
 
 	app.get('/search', function(req, res) {
-		res.render('search', {  title: 'Search For Documents', countries : CT });
+		DM.getAllDocuments( function(e, documents){
+			res.render('search', { title : 'Search For Documents', docs : documents});
+		})
+	});
+
+	app.post('/search', function(req, res) {
+		DM.getOneDocument( function(e, documents){
+			res.render('results', { title : 'Document List', docs : documents });
+		})
 	});
 
 //edit//

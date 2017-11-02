@@ -1,0 +1,19 @@
+
+extends layout
+
+block content
+	div.container(style='margin:20px')
+		table.table.table-bordered.table-striped
+			thead
+				tr
+					th #
+					th Project ID
+					th City
+					th Date
+			tbody
+			- for (var i = 0; i < docs.length; i++)
+				tr
+					td= i+1
+					td= docs[i].id
+					td= docs[i].city
+					td= docs[i].date

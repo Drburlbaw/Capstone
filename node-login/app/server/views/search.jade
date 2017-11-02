@@ -121,24 +121,24 @@ html
               option(value='') Oldest First
               option(value='') A-Z
               option(value='') Z-A
-          div
-          p
-          div
-          p Form Number: XXXXXXXX
-          p Date: XX/XX/XX
-          button#upload_btn(onclick="location.href='edit';", type='button', value='edit')
-            p Edit
-          div
-          p
-          div
-          p Form Number: XXXXXXXX
-          p Date: XX/XX/XX
-          button#upload_btn(onclick="location.href='edit';", type='button', value='edit')
-            p Edit
 
-
-
-
+          block content
+            div.container(style='margin:20px')
+              table
+                thead
+                  tr
+                    th #
+                    th Project ID
+                    th City
+                    th Date
+                tbody
+                - for (var i = 0; i < docs.length; i++)
+                  tr
+                    td= i+1
+                    td= docs[i].id
+                    td= docs[i].city
+                    td= docs[i].date
+          
       //Scripts
       <script src="js/jquery.min.js"></script>
       <script src="js/skel.min.js"></script>
