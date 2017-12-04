@@ -1,0 +1,167 @@
+doctype html
+
+html
+  style.
+    form {
+    text-align: center;
+    display: inline;
+    justify-content:space-between;
+    }
+    input{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border-radius: 30px;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    }
+    select{
+    background-color: #FFFEFF;
+    color: ##9a9a9a !important;
+    border: 3px;
+    width:400px;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    }
+    h3{
+    color:white !important;
+    text-align: center;
+    }
+    .selectWrapper{
+    border-radius:30px;
+    width:400px;
+    overflow:hidden;
+    background:#cccccc;
+    border:3px solid #80BD93;
+    text-align: center !important;
+    position: relative !important:
+    -ms-transform: translateY(-50%);
+    display: inline-block;
+    }
+    .selectBox{
+    width:395px;
+    height:40px;
+    border:0px;
+    outline:none;
+    text-align: center !important;
+    display: inline;
+    }
+    .columnLeft {
+    float: left;
+    width: 50%;
+    border-right: solid;
+    height: 800px;
+    }
+    .columnRight{
+    float: right;
+    width: 50%;
+    background-color: #595866;
+    height:800px;
+    padding-top: 10px;
+    text-align: center !important;
+    }
+    label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    }​
+    .formfield * {
+    vertical-align: middle;
+    }
+    textarea{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+    }
+    p {
+    width:500px;
+    height:4px;
+    display:inline-block;
+    }
+    input[type="checkbox"]{
+    width: auto;
+    text-align: center;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    }
+    .radio-label {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3%;
+    }
+    .radio-input {
+    display: inline-block;
+    vertical-align: top;
+    }
+
+
+  head
+    title View
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+  body.subpage
+    
+    header#header
+      .inner
+        a.logo(href='index.html')
+        nav#nav
+          a(href='index') Home
+          if(logged_in)
+              a(href='mydocs') My Documents
+              a(href='elements') Account
+          else
+            a(href='/login') Log In
+          a(href='about') About
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    section
+      .columnLeft
+        embed(src=file, width='100%', height='800px')
+      .columnRight
+        if(logged_in)
+            a.button(href='/edit'+'?id='+doc.pdf) edit            
+        table
+            thead
+            tbody
+            each field,i in doc
+                if(i != 'pdf')
+                    
+                    if(i =='date')
+                        tr
+                            td= i
+                            td= field.substr(0,10)
+                    
+                    else if(i =='last_modified')
+                        tr    
+                            td= i
+                            td= field.substr(0,10)
+                    
+                    else if(i =='time_uploaded')
+                        tr
+                            td= i
+                            td= field.substr(0,10)
+                    else
+                        tr
+                            td= i
+                            td= field
+
+    //Scripts
+      <script src="js/jquery.min.js"></script>
+      <script src="js/skel.min.js"></script>
+      <script src="js/util.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/edit.js"></script>
+      </body>
+      </html>
+

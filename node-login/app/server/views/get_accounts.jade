@@ -1,21 +1,108 @@
 
+
+doctype html
+//
+  Projection by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  style.
+    form {
+    text-align: center;
+    display: inline;
+    padding: 100px;
+    }
+    input{
+    background-color: #FFFEFF;
+    box-shadow: inset 0 0 0 3px #6cc091;
+    color: #6cc091 !important;
+    border-radius: 30px;
+    border: 3px;
+    padding:10px;
+    width:400px;
+    }
+    select{
+    background-color: #FFFEFF;
+    color: #9a9a9a !important;
+    border:3px solid #80BD93;
+    padding:10px;
+    width:400px;
+    height: 40px;
+    border-radius: 5px;
+    }
+    .selectWrapper{
+    border-radius:30px;
+    display:inline-block;
+    overflow:hidden;
+    background:#cccccc;
+    border:1px solid #cccccc;
+    }
+    .selectBox{
+    width:395px;
+    height:40px;
+    border:0px;
+    outline:none;
+    }
+    input[type=date]{
+      width:200px;
+    }
+    .columnCenter {
+    background-color: #595866 !important;
+    text-align: center !important;
+    height: 100%;
+    }
+    td.empty{
+    opacity: .4!important;
+    font-style: italic;
+    }
+
+    p {
+      width:200px;
+      display:inline-block;
+      height:0px;
+    }
+    footer{
+    background-color: #595866 !important;
+    }.table.table-bordered.table-striped
+  head
+    title Search
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+     
+  body.subpage
+    header#header
+      .inner
+        nav#nav
+          a(href='index') Home
+          if(logged_in)      
+            a(href='mydocs') My Documents
+            a(href='upload') Upload
+            a(href='elements') Account 
+          else
+            a(href='/login') Log In
+          a(href='about') About
+                   
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+
 extends layout
 
 block content
-	div.container(style='margin:20px')
-		table.table.table-bordered.table-striped
-			thead
-				tr
-					th(style='width:40px') #
-					th(style='width:180px') Name
-					th(style='width:200px') Location
-					th(style='width:180px') Username
-					th Account Created
-			tbody
-			- for (var i = 0; i < accts.length; i++)
-				tr
-					td= i+1
-					td= accts[i].name
-					td= accts[i].country
-					td= accts[i].user
-					td= accts[i].date
+    div.container(style='margin:20px')
+      table.table.table-bordered.table-striped
+        thead
+          tr
+            th(style='width:40px') #
+            th(style='width:180px') Name
+            th(style='width:200px') Location
+            th(style='width:180px') Username
+            th Account Created
+            tbody
+            - for (var i = 0; i < accts.length; i++)
+                tr
+                td= i+1
+                td= accts[i].name
+                td= accts[i].country
+                td= accts[i].user
+                td= accts[i].date

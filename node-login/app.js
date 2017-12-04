@@ -9,6 +9,7 @@ var http = require('http');
 var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var fileUpload = require('express-fileupload');
 var errorHandler = require('errorhandler');
 var cookieParser = require('cookie-parser');
 var MongoStore = require('connect-mongo')(session);
@@ -24,6 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('stylus').middleware({ src: __dirname + '/app/public' }));
 app.use(express.static(__dirname + '/app/public'));
+
 
 // build mongo database connection url //
 

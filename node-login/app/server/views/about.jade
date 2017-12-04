@@ -27,10 +27,10 @@ html
         a.logo(href='index.html')
         nav#nav
           a(href='index') Home
-          a(href='mydocs') My Documents
+          if(logged_in)
+            a(href='upload') Upload
+            a(href='get_accounts') Account
           a(href='search') Search
-          a(href='upload') Upload
-          a(href='elements') Account
         a.navPanelToggle(href='#navPanel')
           span.fa.fa-bars
     // Three

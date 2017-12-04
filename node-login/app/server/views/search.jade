@@ -49,6 +49,10 @@ html
     text-align: center !important;
     height: 100%;
     }
+    td.empty{
+    opacity: .4!important;
+    font-style: italic;
+    }
 
     p {
       width:200px;
@@ -69,13 +73,12 @@ html
       .inner
         nav#nav
           a(href='index') Home
-                       
-          a(href='mydocs') My Documents
-                       
-          a(href='upload') Upload
-
-          a(href='elements') Account
-          
+          if(logged_in)      
+            a(href='mydocs') My Documents
+            a(href='upload') Upload
+            a(href='elements') Account 
+          else
+            a(href='/login') Log In
           a(href='about') About
                    
         a.navPanelToggle(href='#navPanel')
@@ -84,28 +87,29 @@ html
     footer#footer
       .inner
         h3 Search For A Document
-        form(action='#', method='post')
+        form(name = 'search',action='#', method='post')
           .selectWrapper
-            select.selectBox
+            select.selectBox(name='form_type')
               option(value='') -Form Type-
-              option(value='') WPA       
-              option(value='') APA
+              option(value='WPA') WPA       
+              option(value='PWA') PWA      
+              option(value='CWA') CWA
                        
           .field.half.first
-            input#docNum(name='doc num', type='text', placeholder='Document Number')
+            input#docNum(name='work_project_number', type='text', placeholder='Work Project Number') 
                        
           .field.half.first
             p From
             p To
           .field.half
-            input#f_date(name='date', type='date', placeholder='From Date')
-            input#t_date(name='date', type='date', placeholder='To Date')
+            input#f_date(name='begin_date', type='date', placeholder='From Date')
+            input#t_date(name='end_date', type='date', placeholder='To Date')
                        
           .field.half.first
-            input#name(name='name', type='text', placeholder='Other1')
+            input#name(name='city', type='text', placeholder='City')
                        
           .field.half.first
-            input#name(name='name', type='text', placeholder='Other2')
+            input#name(name='county', type='text', placeholder='County')
           p
           ul.actions
             li
@@ -128,16 +132,43 @@ html
                 thead
                   tr
                     th #
-                    th Project ID
+                    th Last Modified
+                    th Form Type
+                    th Form Number
                     th City
+                    th County
                     th Date
+                    th View
                 tbody
                 - for (var i = 0; i < docs.length; i++)
                   tr
                     td= i+1
-                    td= docs[i].id
-                    td= docs[i].city
-                    td= docs[i].date
+                    td= docs[i].last_modified.substr(0,10)
+                    if(docs[i].form_type != "") 
+                      td= docs[i].form_type
+                    else
+                      td(class="empty") Form Type
+                    if(docs[i].project_number != "") 
+                      td= docs[i].project_number
+                    else
+                      td(class="empty") Form Number
+                    if(docs[i].city != "") 
+                      td= docs[i].city
+                    else
+                      td(class="empty") City
+                    if(docs[i].county != "") 
+                      td= docs[i].county
+                    else
+                      td(class="empty") County
+                    if(docs[i].date != "") 
+                      td= docs[i].date.substr(0,10)
+                    else
+                      td(class="empty") Date
+                    
+                    
+                    
+                    td 
+                      a.button(href='/view'+'?id='+docs[i].pdf) view
           
       //Scripts
       <script src="js/jquery.min.js"></script>

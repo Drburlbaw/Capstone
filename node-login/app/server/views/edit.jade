@@ -37,8 +37,6 @@ html
     background:#cccccc;
     border:3px solid #80BD93;
     text-align: center !important;
-    position: relative !important:
-    -ms-transform: translateY(-50%);
     display: inline-block;
     }
     .selectBox{
@@ -50,12 +48,17 @@ html
     display: inline;
     }
     .columnLeft {
+    display: flex;
     float: left;
     width: 50%;
     border-right: solid;
-    height: 800px;
+    max-height: 800px;
+    overflow: auto;
+    backface-visibility: hidden;
+    will-change: overflow;
     }
     .columnRight{
+    overflow: auto;
     float: right;
     width: 50%;
     background-color: #595866;
@@ -122,36 +125,90 @@ html
           span.fa.fa-bars
     section
       .columnLeft
-        embed(src='../pdfs/Malaria 1149.pdf#zoom=50', width='100%', height='800px')
+        embed(src=file, width='100%', height='800px')
       .columnRight
         p
-        h3 Add Information to the Form
+        h3 Edit Form Information
         script(src='js/views/edit.js', language='Javascript', type='text/javascript')
-        form(action='#', method='post', id='form1')
+        form(action='#', method='post', id='edit-form')
           .inner
-            .selectWrapper
-              select.selectBox
-                option(value='') -Form Type-
-                option(value='') WPA
-                option(value='') APA
-            div
-              input#docNum(type='text', placeholder='Document Number')
-            div
-              input#f_date(name='date', type='date' , placeholder="Date")
-            div
-              p Insert the specific information in the form of "Type" : "Content"
-              textarea(name='message', rows='6', cols='75', placeholder='Type : Content , Text 2 : Content 2')
-            div
-              input(type='button', value='test done', onclick="done();")
-            div
-              input(class="radio-input" , type='checkbox', value='')
-              label(class="radio-label") Mark Complete
-              input(class="radio-input" , type='checkbox', value='')
-              label(class="radio-label") Mark For Review
+            table(id='table',name='table')
+                thead
+                    th * = required
+                tbody
+                each field,i in doc
+
+                    if(i != 'form_type')
+                        if(i != 'pdf')
+                            tr
+                                case i
+                                    when 'last_modified'
+                                        td Last Modified
+                                        td= doc.last_modified.substr(0,10)
+
+                                    when 'time_uploaded'
+                                        td Date Uploded
+                                        td= doc.time_uploaded.substr(0,10)
+
+                                    when 'date'
+                                        td= "Date" + " *"
+                                        td 
+                                            input#docNum(name = i,type='text', placeholder=i,value = field.substr(0,10))
+                                    when 'project_number'
+                                        td= "Project Number"+ " *"
+                                        td 
+                                            input#docNum(name = i,type='text', placeholder=i,value = field)
+                                    when 'city'
+                                        td= "City"+ " *"
+                                        td 
+                                            input#docNum(name = i,type='text', placeholder=i,value = field)
+                                    when 'county'
+                                        td= "County" + " *"
+                                        td 
+                                            input#docNum(name = i,type='text', placeholder=i,value = field)
+                                    default
+                                        td= i
+                                        td 
+                                            input#docNum(name = i,type='text', placeholder=i,value = field)
+                                        td
+                                            input(type='button',style="width:auto;" value='delete', onclick="deleteRow(this);")
+                    else 
+                        tr
+                            td= "Form Type" + " *"
+                            td
+                                .selectWrapper
+                                  select.selectBox(name='form_type')
+                                    case doc.form_type
+                                        when 'WPA'
+                                            option(value='') -Form Type-
+                                            option(value='WPA',selected) WPA
+                                            option(value='PWA') PWA
+                                            option(value='CWA') CWA
+                                        when 'PWA'
+                                            option(value='') -Form Type-
+                                            option(value='WPA') WPA
+                                            option(value='PWA',selected) PWA
+                                            option(value='CWA') CWA
+                                        when 'CWA'
+                                            option(value='') -Form Type-
+                                            option(value='WPA') WPA
+                                            option(value='PWA') PWA
+                                            option(value='CWA', selected) CWA
+                                        default
+                                            option(value='') -Form Type-
+                                            option(value='WPA') WPA
+                                            option(value='PWA') PWA
+                                            option(value='CWA') CWA   
+
             p
             ul.actions
               li
-                input.button.alt(value='Done', type='submit')
+              input.button.alt(value='Submit Changes', type='submit')
+              input(type='button', value='Add New Box', onclick="addRow();")
+            p
+            ul.actions
+              li
+                
     //Scripts
       <script src="js/jquery.min.js"></script>
       <script src="js/skel.min.js"></script>

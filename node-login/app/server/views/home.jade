@@ -6,7 +6,7 @@ doctype html
 html
   style.
     #banner{
-        background-image: url(../../images/banner.jpg); !important
+        background-image: url(../../images/banner.jpg)!important; 
     }
     .left {
     padding:20px;
@@ -44,11 +44,7 @@ html
     // Header
     header#header
       .inner
-        a.logo(href='/index')
-          strong Projection
-          |  by TEMPLATED
         nav#nav
-          a(href='/index') Home
           a(href='/login') Log In
           a(href='/search') Search Documents
         a.navPanelToggle(href='#navPanel')
@@ -60,7 +56,6 @@ html
           img(src='images/film.png', alt='film_pic', width='90', height='90')
           h1 Welcome to Micro History
         .flex
-          p &quot;Insert text here&quot;
         footer
     // Three
     section#three.wrapper.align-center

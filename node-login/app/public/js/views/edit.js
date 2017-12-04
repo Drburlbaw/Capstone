@@ -1,18 +1,22 @@
 
-	var counter = 1;
-	var limit = 3;
-	function addInput(divName){
-	if (counter == limit)  {
-		alert("You have reached the limit of adding " + counter + " inputs");
+	function deleteRow(r){
+		var i = r.parentNode.parentNode.rowIndex;
+    	document.getElementById("table").deleteRow(i);
+
 	}
-	else {
-		var newdiv = document.createElement('div');
-		newdiv.innerHTML = "<input type='text' name='myInputs[]' placeholder='New Entry'>";
-		document.getElementById(divName).appendChild(newdiv);
-		counter++;
-		console.log(document.getElementByName(myInputs));
-		}
-		
+
+	function addRow(){
+		var table = document.getElementById("table");
+
+		var row = table.insertRow();
+
+		var cell1 = row.insertCell();
+		var cell2 = row.insertCell();
+		var cell3 = row.insertCell();
+
+		cell1.innerHTML = "<input id=\"docNum\" style=\"width:200px;\" name=\"type\" type=\"text\" placeholder=\"type\" >";
+		cell2.innerHTML = "<input id=\"docNum\" name=\"value\" type=\"text\" placeholder=\"value\">";
+		cell3.innerHTML = "<input type=\"button\" style=\"width:auto;\" value=\"delete\" onclick=\"deleteRow(this);\">";
 	}
 
 	function done(){
