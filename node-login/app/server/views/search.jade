@@ -76,7 +76,7 @@ html
           if(logged_in)      
             a(href='mydocs') My Documents
             a(href='upload') Upload
-            a(href='elements') Account 
+            a(href='get_accounts') Account
           else
             a(href='/login') Log In
           a(href='about') About
@@ -96,7 +96,7 @@ html
               option(value='CWA') CWA
                        
           .field.half.first
-            input#docNum(name='work_project_number', type='text', placeholder='Work Project Number') 
+            input#docNum(name='project_number', type='text', placeholder='Project Number') 
                        
           .field.half.first
             p From
@@ -140,35 +140,36 @@ html
                     th Date
                     th View
                 tbody
-                - for (var i = 0; i < docs.length; i++)
-                  tr
-                    td= i+1
-                    td= docs[i].last_modified.substr(0,10)
-                    if(docs[i].form_type != "") 
-                      td= docs[i].form_type
-                    else
-                      td(class="empty") Form Type
-                    if(docs[i].project_number != "") 
-                      td= docs[i].project_number
-                    else
-                      td(class="empty") Form Number
-                    if(docs[i].city != "") 
-                      td= docs[i].city
-                    else
-                      td(class="empty") City
-                    if(docs[i].county != "") 
-                      td= docs[i].county
-                    else
-                      td(class="empty") County
-                    if(docs[i].date != "") 
-                      td= docs[i].date.substr(0,10)
-                    else
-                      td(class="empty") Date
-                    
-                    
-                    
-                    td 
-                      a.button(href='/view'+'?id='+docs[i].pdf) view
+                  if(docs.length)
+                  - for (var i = 0; i < docs.length; i++)
+                    tr
+                      td= i+1
+                      td= docs[i].last_modified.substr(0,10)
+                      if(docs[i].form_type != "") 
+                        td= docs[i].form_type
+                      else
+                        td(class="empty") Form Type
+                      if(docs[i].project_number != "") 
+                        td= docs[i].project_number
+                      else
+                        td(class="empty") Form Number
+                      if(docs[i].city != "") 
+                        td= docs[i].city
+                      else
+                        td(class="empty") City
+                      if(docs[i].county != "") 
+                        td= docs[i].county
+                      else
+                        td(class="empty") County
+                      if(docs[i].date != "") 
+                        td= docs[i].date.substr(0,10)
+                      else
+                        td(class="empty") Date
+                      
+                      
+                      
+                      td 
+                        a.button(href='/view'+'?id='+docs[i].pdf) view
           
       //Scripts
       <script src="js/jquery.min.js"></script>

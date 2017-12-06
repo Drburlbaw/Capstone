@@ -43,38 +43,11 @@ exports.getAllDocuments = function(callback)
 
 exports.getSpecificDocuments = function(obj,callback)
 {	
-	var now = new Date();
-	if(obj.begin_date){
-		if(obj.end_date){
-			obj["date"] = { 
-				$and:[
-			        {$gte: moment(obj.begin_date ).format()},
-			        {$lte: moment(obj.end_date ).format()}
-			    ]
-		    }
-		    delete obj.begin_date;
-		    delete obj.end_date;
-		}
-		else{
-			obj["last_modified"] = {
-		        $gte: moment(obj.begin_date ).format()
-		    }
-		    delete obj.begin_date;
-		}
-	}
-	else{
-		if(obj.end_date){
-			obj["last_modified"] = {
-		        $lte: moment(obj.end_date ).format()
-		    }
-		    delete obj.end_date;
-		}
-	}
-	
-	
 
-	console.log(obj)
-
+	
+    delete obj.begin_date;
+    delete obj.end_date;
+    console.log(obj)
 	documents.find(obj).toArray(
 		function(e, res) {
 		if (e) callback(e)
@@ -88,12 +61,24 @@ exports.getUploadedDocuments = function(callback)
 	documents.find({ $and: [
 			{
 				"time_uploaded": { // 2 minutes ago (from now)
-	        		$gte: moment(now).subtract(1,'day').format()
+	        		$gte: moment(now).subtract(2,'minutes').format()
 	        	}
 
 			},
 			{
 				"city":""
+			},
+			{
+				"form_type":""
+			},
+			{
+				"county":""
+			},
+			{
+				"project_number":""
+			},
+			{
+				"date":""
 			}
 			
 		]
@@ -114,28 +99,32 @@ exports.getDocumentByID = function(id,callback)
 	});
 }
 
-exports.addDocument = function(id,checksum,callback)
+exports.addDocument = function(file,checksum,callback)
 {	
 	var today = new Date();
 
-	if (documents.find({md5:checksum}).toArray().length){
-		console.log('already exists')
-		callback(false)
-	}
-	else{
-		documents.insertOne({
-			last_modified: moment(today).format(),
-			time_uploaded: moment(today).format(),
-			pdf:id,
-			form_type: '',
-			md5: checksum,
-			date: '',
-			project_number: '',
-			city: '',
-			county: ''
+	documents.find({md5:checksum}).limit(1).toArray(
+		function(e, o){
+			if (o.length){
+				callback(true,'PDF: ' + file.originalname + ' is already in the database')
+			}
+			else{
+				documents.insertOne({
+					last_modified: moment(today).format(),
+					time_uploaded: moment(today).format(),
+					pdf:file.filename,
+					form_type: '',
+					md5: checksum,
+					date: '',
+					project_number: '',
+					city: '',
+					county: ''
+				})
+				callback(false, '')
+			}
 		})
-		callback(true)
-	}
+
+	
 }
 
 exports.updateDocumentByID = function(newData,callback)
@@ -154,6 +143,9 @@ exports.updateDocumentByID = function(newData,callback)
 			}
 			if(typeof(newObject[i]) == "string" && i!="pdf"){
 				newObject[newI] = newObject[i].toUpperCase();
+			}
+			if(newI != i){
+				delete newObject[i];
 			}
 		}
 		newObject._id = o[0]._id;

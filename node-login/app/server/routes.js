@@ -26,7 +26,13 @@ module.exports = function(app) {
 
 // main login page //
 	app.get('/', function(req,res){
-		res.render('home', { title: 'Hello - Welcome to Microfilm' });
+		if (req.session.user == null){
+	// if user is not logged-in redirect back to login page //
+			res.render('home', { title: 'Hello - Welcome to Microfilm' });
+		}	else{
+			res.redirect('/index');
+		}
+		
 	});
 
 	app.get('/login', function(req, res){
@@ -61,8 +67,8 @@ module.exports = function(app) {
 		});
 	});
 	
-// logged-in user homepage //
-	
+
+// Guest Home Page // 	
 	app.get('/home', function(req, res) {
 		if (req.session.user == null){
 	// if user is not logged-in redirect back to login page //
@@ -99,7 +105,7 @@ module.exports = function(app) {
 		});
 	});
 
-// index //
+// logged-in user homepage //
 
 	app.get('/index', function(req, res) {
 
@@ -124,22 +130,31 @@ module.exports = function(app) {
 	});
  
 	app.post('/upload',upload.array('uploadForm'),function(req,res){
+	   
 	    if (req.session.user == null){
 	// if user is not logged-in redirect back to login page //
 			res.redirect('/');
-		}	else{
+		}	
+		else{
 			if(req.files){
+				var message = ''
 		    	for (var i = req.files.length - 1; i >= 0; i--) {
 		    		let sampleFile = req.files[i]
 		    		md5File(sampleFile.path, (err, hash) => {
-		    			DM.addDocument(sampleFile.filename,hash,function(req,res){});
+		    			DM.addDocument(sampleFile,hash,function(con,mes){
+							message += mes;
+		    			});
 
 		    		})
 		    	}  
-		    }
-			
+		    		if(message != '') {
+						res.status(500).send(message)
+					}
+					else{
+						res.redirect('search?upload=1');
+					}
+		    }	
 		}
-		res.redirect('search?upload=1');
 	});
 
 
@@ -166,12 +181,18 @@ module.exports = function(app) {
 	});
 
 	app.post('/search', function(req, res) {
-		var search_form = new Object();
-		if(req.body['wpa_form_number']){
-			search_form.wpa_form_number = req.body['wpa_form_number'];
+		var authorized = false
+		if (req.session.user != null){
+	// if user is logged-in so it changes button options//
+			authorized = true
 		}
-		if(req.body['work_project_number']){
-			search_form.work_project_number = req.body['work_project_number'];
+
+		var search_form = new Object();
+		if(req.body['form_type']){
+			search_form.form_type = req.body['form_type'];
+		}
+		if(req.body['project_number']){
+			search_form.project_number = req.body['project_number'];
 		}
 		if(req.body['begin_date']){
 			search_form.begin_date  = req.body['begin_date'];
@@ -185,10 +206,9 @@ module.exports = function(app) {
 		if(req.body['county']){
 			search_form.county = req.body['county'].toUpperCase();
 		}
-
+		console.log(search_form)
 		DM.getSpecificDocuments(search_form, function(e, documents){
-
-			res.render('search', { title : 'Document List', docs : documents });
+			res.render('search', { title : 'Document List', docs : documents, logged_in:authorized});
 		})
 	});
 
@@ -373,7 +393,6 @@ module.exports = function(app) {
 	// if user is not logged-in redirect back to login page //
 			res.redirect('/');
 		}	else{
-			console.log(req.session.user.user)
 			AM.getAllRecords( function(e, accounts){
 				res.render('get_accounts', { title : 'Account List', accts : accounts });
 			})

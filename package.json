@@ -8,6 +8,7 @@
     "express": "^4.16.2",
     "express-fileupload": "^0.3.0",
     "jade": "^1.11.0",
+    "md5": "^2.2.1",
     "md5-file": "^3.2.3",
     "moment": "^2.19.0",
     "mongodb": "^2.2.31",
